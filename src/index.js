@@ -14,7 +14,7 @@ app.use(express.static('public'));
 const corsOptions = {
   origin: 'http://localhost:3000', // Allow requests only from your React app
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Specify allowed methods
-  allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
+  // allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
   optionsSuccessStatus: 200, // Some legacy browsers choke on 204
 };
 
