@@ -12,7 +12,10 @@ app.use(express.static('public'));
 
 // Configure CORS for all routes
 const corsOptions = {
-  origin: 'https://seguridadbackendmasiclon-qrn9ajmx0-juans-projects-b17a60fc.vercel.app', // Allow requests only from your React app
+  origin: [
+    'https://seguridadbackendmasiclon-qrn9ajmx0-juans-projects-b17a60fc.vercel.app', // URL de tu frontend en Vercel
+    'http://localhost:3000', // Permitir localhost para desarrollo
+  ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Specify allowed methods
   allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
   optionsSuccessStatus: 200, // Some legacy browsers choke on 204
