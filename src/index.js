@@ -14,7 +14,7 @@ app.use(express.static('public'));
 const corsOptions = {
   origin: 'https://seguridadbackendmasiclon-qrn9ajmx0-juans-projects-b17a60fc.vercel.app', // Allow requests only from your React app
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Specify allowed methods
-  // allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
+  allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
   optionsSuccessStatus: 200, // Some legacy browsers choke on 204
 };
 
