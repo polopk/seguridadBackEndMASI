@@ -8,7 +8,13 @@ app.set('port', process.env.PORT || 3000);
 
 // Middlewares
 app.use(express.json());
-app.use(cors());
+// Configurar CORS para permitir solo la URL especificada
+const corsOptions = {
+  origin: 'http://localhost:3000', // Reemplaza con la URL de tu frontend
+  optionsSuccessStatus: 200 // Para navegadores antiguos que fallan con status 204
+};
+
+app.use(cors(corsOptions));
 app.use(express.static('public'))
 // Routes
 // app.use(require('./routes/permisos'));
